@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+
+        
+
+<div class="container is-fluid">
+  <div class="notification">
+    <h1>Üdvözöljük a Szabadulószoba fő oldalán!</h1>
+    <p class="text-muted">
+      
+      Megnézheti a foglalt időpontokat a Foglalások gomb megnyomásával, <br>
+      és leadhat egy új foglalást a Foglalás gomb használatával.
+    </p>
+    <div class="container is-fluid">
+      <div class="image has-ratio">
+        <img src="../assets/jatek.jpg" class="img-fluid rounded mx-auto d-block" alt="Játék kép">
+        <br>
+      </div>
+    </div>
+
+    <div class="d-grid gap-2">
+     
+      <a class="btn btn-primary" routerLink="/foglalas" role="button">Foglalás</a>
+      <button class="btn btn-primary" (click)="refreshPage()">Foglalások</button>
+    </div>
+    <br>
+
+  </div>
+</div>
+
+    
+</body>
+</html>

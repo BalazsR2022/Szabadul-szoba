@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foglalas</title>
+</head>
+<body>
+
+<div class="container is-fluid">
+ 
+
+  <div class="container is-fluid">
+    <div class="notification">
+      <h1>Foglalás</h1>
+      <h2>Kérjük adja meg adatait, hogy véglegesíthessük foglalási igényét!</h2>
+    </div>
+  </div>
+  <br>
+  
+  <form class="row g-3" (ngSubmit)="submitForm()">
+    <div class="container is-fluid">
+      <div class="notification">
+  
+        <div class="col-12">
+          <label for="inputDate" class="form-label">Dátum</label>
+          <input name="inputDate" type="date" class="form-control" id="Datum" [(ngModel)]="foglalas.datum" required>
+  
+          <label for="inputName" class="form-label">Név</label>
+          <input name="inputName" type="text" class="form-control" id="Nev" [(ngModel)]="foglalas.nev" required>
+  
+          <label for="inputPerson" class="form-label">Fő (2-16)</label>
+          <input name="inputPerson" type="number" class="form-control" id="Fo" [(ngModel)]="foglalas.fo" min="2" max="16" required>
+  
+          <label for="inputAddress" class="form-label">Cím</label>
+          <input name="inputAddress" type="text" class="form-control" id="Cim" [(ngModel)]="foglalas.cim" required>
+  
+          <label for="inputPostalCode" class="form-label">Irányítószám (1000-9999)</label>
+          <input name="inputPostalCode" type="number" class="form-control" id="Iranyitoszam" [(ngModel)]="foglalas.iranyitoszam" min="1000" max="9999" required>
+        </div>
+  
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary" id="foglalas">Foglalás elküldése</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  
+</div> 
+    
+      
+    
+  
+ 
+</body>
+</html>

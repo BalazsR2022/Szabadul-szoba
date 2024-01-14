@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foglalások</title>
+</head>
+<body>
+    <div class="container is-fluid">
+      <div class="notification">
+       <h1>Foglalások</h1> <br>
+       <h3>Az Önnek megfelelő időpontban a Foglalás oldalon jelezheti felénk foglalási szándékát.</h3>
+       <br>
+      </div>
+   
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Dátum</th>
+            <th scope="col">Név</th>
+            <th scope="col">Fő</th>
+            <th scope="col">Cím</th>
+            <th scope="col">Irányítószám</th>
+          </tr>
+        </thead>
+        <tbody >
+          <tr *ngFor="let foglalastabla of foglalasok">
+           
+            <td>{{foglalastabla.datum}}</td>
+            <td>{{foglalastabla.nev}}</td>
+            <td>{{foglalastabla.fo}}</td>
+            <td>{{foglalastabla.cim}}</td>
+            <td>{{foglalastabla.iranyitoszam}}</td>
+            
+          </tr>
+       
+        </tbody>
+      </table>
+      <div class="d-grid gap-2">
+     
+        <a class="btn btn-light" routerLink="/home" role="button">Home</a>
+        
+      </div>
+      <br>
+      <br>
+    </div>
+    <!-- 3) Hozzon létre új komponenst, amelyen a foglalások adatai megjelennek
+    a) Az adatok a kiszolgáló szerverről a megfelelő REST API függvénnyel kérhető le.
+    b) Az adatokat jelentse meg táblázatos formában, dátum szerinti csökkenő sorrendben.
+    Ügyeljen arra, hogy az oszlopok sorrendje a következő legyen: dátum, név, fő, helyszín,
+    irányítószám. (A táblázatkészítéséhez használhat külső komponenst is, pl.: Angular
+    Material, PrimeNG, Quasar, stb.)
+    c) Állítsa be a komponensnek az eléréséhez a /foglalasok útvonalat.
+    d) A kezdőoldalon a megfelelő feliratú linknek/gombnak úgy állítsa be a navigációját hogy
+    az a /foglalasok útvonalra navigáljon. -->
+    
+</body>
+</html>
